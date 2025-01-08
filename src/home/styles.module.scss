@@ -1,0 +1,551 @@
+@font-face {
+  font-family: 'custom1';
+  src: url('/font/NeueMachina-Light.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'custom2';
+  src: url('/font/JetBrainsMono-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'custom3';
+  src: url('/font/Extenda-40-Hecto-trial.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'custom4';
+  src: url('/font/horizon.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'custom5';
+  src: url('/font/Oswald-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'custom6';
+  src: url('/font/Oswald-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'custom7';
+  src: url('/font/Inter_24pt-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'custom8';
+  src: url('/font/ArchivoBlack-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.container {
+  position: relative;
+  background-color: #1a1a2e !important;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; 
+  white-space: nowrap;
+}
+
+
+.violetShape {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #6a0dad; 
+  clip-path: polygon(35% 0%, 100% 0%, 100% 100%, 65% 100%);
+  z-index: 1; // Aoi this make sure it's below the text, oki?
+}
+
+.backgroundImage {
+  position: absolute;
+  top: 5%;
+  left: 25%;
+  transform: translateX(-50%);
+  width: 80%; 
+  max-width: 750px; 
+  z-index: 2; 
+  opacity: 1;
+}
+
+.aoiText {
+  position: absolute;
+  top: 10%;
+  left: 55%;
+  font-family: 'custom3', sans-serif;
+  font-size: 700px; 
+  font-weight: 100;
+  color: #1a1a2e; 
+  z-index: 2; 
+  text-transform: uppercase;
+}  
+
+.head1, .head3, .head4 {
+  display: inline-block;
+  color: #ffffff;
+  white-space: nowrap;
+  position: relative; 
+  min-width: 100%;
+  word-spacing: 40px; 
+}
+
+.head3 {
+  font-family: 'custom1', sans-serif;
+  font-size: 80px;
+  animation: slideLeftToRight 300s linear infinite; 
+  animation-delay: 0s;
+}
+
+.head1 {
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  font-weight: 800;
+  font-size: 150px;
+  margin-top: -40px;
+  animation: slideRightToLeft 300s linear infinite; 
+  animation-delay: 0s;
+}
+
+.head4 {
+  font-family: 'custom2', sans-serif;
+  font-size: 50px;
+  margin-top: -20px;
+  animation: slideLeftToRight 300s linear infinite; 
+  animation-delay: 0s;
+}
+
+.getInTouchButton {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #6a0dad;
+  border-radius: 25px;
+  font-family: 'custom4', sans-serif;
+  font-size: 20px;
+  padding: 10px 30px;
+  cursor: pointer;
+  text-transform: uppercase;
+  z-index: 3;
+  transition: all 0.3s ease;
+}
+
+.getInTouchButton:hover {
+  background-color: #6a0dad;
+  color: #1a1a2e;
+}
+
+.divider {
+  width: 100%; 
+  height: 2px; 
+  background: #6a0dad; 
+  opacity: 0.8; 
+}
+
+.extendedSection {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Align items vertically */
+  justify-content: space-between; /* Evenly distribute space between items */
+  width: 200%; /* Set width to 100% to prevent overflow */
+  background-color: #1a1a2e; /* Match the landing page's background */
+  padding: 20px 20px;
+  color: #ffffff;
+  font-family: 'custom2', sans-serif;
+  gap: 1rem; /* Ensure consistent gap between the items */
+  text-align: left; /* Align text to the left */
+  overflow: hidden; /* Hide anything outside the container */
+  animation: marqueeAnimation 30s linear infinite; /* Continuous scroll animation */
+  animation-play-state: running; /* Default animation state */
+}
+
+.extendedSection:hover {
+  animation-play-state: paused; /* Pause animation on hover */
+}
+.caseStudyWrapper{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.imageSection img {
+  width: 200px;
+  height: 145px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-top: 4%;
+}
+
+.textSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px; 
+}
+
+.title {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "custom5", sans-serif;
+  margin: 0;
+}
+
+.subtitle {
+  font-family: 'custom6', sans-serif;
+  font-size: 15px;
+  line-height: 1.5; /* Increase line height for better readability */
+  color: #d1d1d1;
+  margin: 0;
+  max-width: 215px; /* Set a maximum width to control line breaks */
+  word-wrap: break-word; /* Ensure long words break properly */
+  text-align: left; /* Align the text to the left */
+}
+
+.learnMoreButton {
+  display: flex;
+  align-items: center; /* Vertically center */
+  justify-content: center; /* Horizontally center */
+  background-color: #6a0dad;
+  color: #1a1a2e;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 24px; /* Font size for the arrow */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  
+  &:hover {
+    background-color: #8a2be2;
+    transform: scale(1.1); /* Slightly enlarge on hover */
+  }
+
+  .arrow1 {
+    font-size: 20px; /* Adjust the size here */
+    display: inline-block;
+    line-height: 0; /* Reset line height for arrow */
+    position: relative;
+    top: -3px; /* Adjust as necessary to center */
+  }
+}
+
+.learnMoreText {
+  white-space: nowrap; /* Prevents wrapping */
+  text-align: center; /* Centers the text */
+  font-family: 'custom6', sans-serif;
+  font-size: 15px;
+  color: #ffffff;
+  line-height: 1; /* Prevents extra spacing */
+}
+
+.buttonTextWrapper {
+  display: flex; /* Ensure button and text are on the same line */
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Vertically align button and text */
+  gap: 10px; /* Space between button and text */
+}
+
+.wordsWithBordersContainer {
+  display: flex;
+  flex-direction: column; /* Align elements vertically */
+  gap: 1px; /* Space between the first and second row of words */
+}
+
+.wordsWithBorders {
+  font-family: 'custom7', sans-serif;
+  font-size: 12px;
+  display: flex; /* Align words horizontally */
+  gap: 5px; /* Adds space between each word */
+}
+
+.wordWithBorder {
+  border: 2px solid #6A0DAD; /* Set border color to #6A0DAD */
+  border-radius: 50px; /* Pill shape border */
+  padding: 7px; /* Padding inside the border */
+  display: inline-block; /* Ensures the border wraps only the word */
+}
+
+.wordsWithBordersCenter {
+  font-family: 'custom7', sans-serif;
+  font-size: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px; /* Adds space between each word */
+  margin-top: 5px; /* Adds space between the two sets of words */
+}
+
+.wordsWithBordersBottom {
+  font-family: 'custom7', sans-serif;
+  font-size: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px; /* Adds space between each word */
+  margin-top: 5px; /* Adds space between the two sets of words */
+}
+
+.buttonWithBorder {
+  font-family: 'custom7', sans-serif;
+  font-size: 12px;
+  background-color: #6A0DAD; /* Match the pill border color */
+  color: white;
+  border: none;
+  border-radius: 50px; /* Pill shape */
+  padding: 6px 20px; /* Padding inside the button */
+  padding-bottom: 3%;
+  cursor: pointer;
+  display: inline-block; /* Makes it inline with the words */
+  align-self: center; /* Aligns button in the middle vertically */
+  transition: background-color 0.3s ease;
+}
+
+.arrow2 {
+  margin-left: 5px; /* Adds space between the word and the arrow */
+  font-size: 16px; /* Adjust arrow size */
+  color: #1a1a2e;
+}
+
+.buttonWithBorder:hover {
+  background-color: #8a2be2; /* Hover effect */
+}
+
+.testimonialCarousel {
+  display: flex;
+  justify-content: center;   /* Center horizontally */
+  align-items: center;       /* Center vertically */
+  width: 350px;
+  height: 130px;
+  padding: 20px;
+  position: relative;        /* Positioning for absolute children */
+}
+
+.testimonialWrapper {
+  position: absolute;        /* Position elements absolutely within the carousel */
+  display: flex;
+  align-items: center;       /* Center content vertically within testimonial */
+  background-color: #1A1A2E;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: 1px solid #6A0DAD;
+  box-shadow: 0px 10px 10px #26263a;
+  width: 300px;              /* Same width for both wrappers */
+  z-index: 1;                /* Default z-index */
+}
+
+.clientImage {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.clientComment {
+  font-family: 'custom7', sans-serif;
+  font-size: 12px;
+  color: #ffffff;
+}
+
+.buttonTestimonial {
+  font-family: 'custom7', sans-serif;
+  font-size: 10px;
+  color: #ffffff;
+  background-color: #1A1A2E;
+  border: none;
+  margin-top: 5%;
+  cursor: pointer;
+  position: relative; /* Required for positioning the pseudo-element */
+}
+
+.buttonTestimonial::after {
+  content: ''; /* No content, just a line */
+  position: absolute;
+  bottom: 0; /* Position it at the bottom of the button */
+  left: 0;
+  width: 0%; /* Initially, the width is 0 */
+  height: 2px; /* Height of the underline */
+  background-color: #6A0DAD; /* Color of the underline */
+  transition: width 0.3s ease; /* Animate the width */
+}
+
+.buttonTestimonial:hover::after {
+  width: 100%; /* On hover, the width expands to 100% */
+}
+
+/* Client 1 is positioned slightly higher (default to be in front) */
+.clientWrapper1 {
+  top: 0;
+  z-index: 2;  /* This makes sure Client 1 is in front */
+  width: 330px;
+}
+
+/* Client 2 is positioned slightly lower */
+.clientWrapper2 {
+  top: 30px;  /* Client 2 is slightly lower */
+  z-index: 1;  /* Client 2 stays behind */
+  width: 300px;
+}
+
+.circleWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 1rem;
+}
+
+.circle {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #b9faf8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 2; // Ensures the circle appears above the text
+
+  // The pseudo-element that will be animated
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #340755; // Starting color
+    border-radius: 50%;
+    transition: transform 0.4s ease, background-color 0.4s ease;
+    transform: scale(0); // Starts small
+  }
+
+  &:hover::before {
+    transform: scale(1); // Grows to fill the circle
+    background-color: #6a0dad; // Final color on hover
+  }
+
+  &:hover {
+    // Optional: Add other effects on hover, like scaling the icon
+    transform: scale(1.1); // Slightly increase size of the circle
+    transition: transform 0.3s ease;
+  }
+}
+
+
+.emailIcon {
+  font-size: 30px !important;
+  color: #333;
+  transition: transform 0.3s ease-in-out;
+  z-index: 3;
+}
+
+.textCircle {
+  font-family: 'custom8', sans-serif;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1; // Ensures the text appears behind the circle
+  animation: spin 30s linear infinite; /* Spin animation */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.charCircle {
+  font-size: 10px;
+  position: absolute;
+  top: -25px;
+  /* No transform-related styles here, handled in inline styles */
+}
+
+.aboutMarquee {
+  position: relative;
+  overflow: hidden; /* Prevents text from spilling out of the container */
+  white-space: nowrap; /* Keeps the text on a single line */
+  width: 100%;
+  background-color: #6a0dad; /* Matches the background color */
+  padding: 0; /* Removes unwanted space above and below the text */
+  text-align: center; /* Centers the text */
+  font-size: 5rem; /* Adjust to your needs */
+  font-weight: bold; /* Makes the text bold */
+  color: #1a1a2e; /* Adjust color */
+}
+
+.aboutMarquee span {
+  display: inline-block; /* Ensures smooth animations */
+  transform: translateX(0); /* Starting position */
+}
+
+.aboutme {
+  height: 100vh;
+}
+
+
+@keyframes rotateText {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+@keyframes slideLeftToRight {
+  0% {
+    transform: translateX(0); 
+  }
+  100% {
+    transform: translateX(100%); 
+  }
+}
+
+@keyframes slideRightToLeft {
+  0% {
+    transform: translateX(0); 
+  }
+  100% {
+    transform: translateX(-100%); 
+  }
+}
+
+@keyframes marqueeAnimation {
+  to {
+    transform: translateX(calc(-50% - 20px)); // Move to the left side
+  }
+}
